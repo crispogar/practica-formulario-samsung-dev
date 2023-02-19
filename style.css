@@ -1,0 +1,160 @@
+/* Estilo empleado en la página de forma general. Cargamos la font más parecida, que podría ser Montserrat pero no coinciden las aes estando rectas. Optamos por Poppins. */
+
+@import url('https://fonts.google.com/specimen/Poppins');
+
+/* Con la extensión de Chrome Eye Dropper se aprecia que el color de la fuente del encabezado (h1) parece #adbbe2. En el caso de los otros campos parece #828bac. 
+El fondo de la caja central parece #2e3645. El reborde de la caja central parece #3d4358. El fondo restante parece #242933. Es lo que aplicaremos. */
+
+body {
+  font-family: 'Poppins';
+  background-color: #242933;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Para el h1 o encabezado empleamos lo siguiente. */
+
+h1 {
+  color: #adbbe2;
+  font-weight: 450;
+  height: 50px;
+  margin: auto; 
+  line-height: 10px; 
+  margin-top: 10px;
+}
+
+/* Para el div class "box-formulario" utilizamos lo siguiente. */
+
+.formulario {
+  border: 2px solid #3d4358;
+  border-radius: 5px;
+  background-color: #2e3645;
+  padding: 35px;
+  margin-top: 25px;
+}
+
+/* Para las etiquetas (label) del formulario. */
+
+label {
+  margin-top: 15px;
+  font-weight: 350;
+  color: #828bac;
+  margin-bottom: 2px;
+}
+
+/* Para las cajas blancas de input, debajo de label. */
+
+input {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  height: 30px;
+  width: 375px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 2px solid #2e3645;
+}
+
+/* Para el botón enviar. El azul de fondo parece #6c63ff, el recuadro parece como azul oscuro y negro #1e1d48 y el blanco tira ligeramente a violeta #e0deff. */
+
+#botonEnviar {
+  color: #e0deff;
+  font-weight: bolder;
+  background-color: #6c63ff;
+  border: 2px solid #1e1d48;
+  height: 40px;
+  width: 390px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Para el botón enviar. Cuando pasamos por encima se pone un borde blanco. */
+
+#botonEnviar:hover {
+  border: 2px solid #FFFFFF;
+}
+
+/* Estilos para las validaciones (o no) de los campos. Validación correcta. El color verde #4cbd62 está sacado con Eye Dropper. */
+
+#formulario input[type="text"]:valid {
+  background: url(images/success-icon.svg);
+  background-position: 350px;
+  border: 2px solid #4cbd62;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+input[type="email"]:valid {
+  background: url(images/success-icon.svg);
+  background-position: 350px;
+  border: 2px solid #4cbd62;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+input[type="password"]:valid {
+    background: url(images/success-icon.svg);
+    background-position: 350px;
+    border: 2px solid #4cbd62;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Validación incorrecta para cada campo. El color rojo #db5a5a; está sacado con Eye Dropper. */
+
+.input-name:invalid {
+  background: url(images/error-icon.svg);
+  background-position: 350px;
+  border: 2px solid #db5a5a;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.input-email:invalid {
+  background: url(images/error-icon.svg);
+  background-position: 350px;
+  border: 2px solid #db5a5a;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.input-password:invalid {
+  background: url(images/error-icon.svg);
+  background-position: 350px;
+  border: 2px solid #db5a5a;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.input-confirma:invalid {
+    background: url(images/error-icon.svg);
+    background-position: 350px;
+    border: 2px solid #db5a5a;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* Estilo del mensaje de error en cada campo cuando no está bien. */
+
+span {
+    color:#db5a5a;
+    font-weight: 200px;
+    margin-top: -20px;
+    margin-bottom: 5px;
+}
