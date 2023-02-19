@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ---------- Para meter el CSS. ---------- -->
+
+    <link rel="stylesheet" href="style.css"/>
+
+<!-- ---------- Para meter el formulario. ---------- -->
+
+    <title>Formulario</title>
+</head>
+
+<body>
+    <div class="formulario">
+        <h1>Create Account</h1>
+        <form id="formulario">
+
+<!-- ---------- Campo del nombre. ---------- -->
+
+        <div class="campos-formulario">
+        <label for="name">Nombre</label><br />
+        <input type="text" class="text" name="name" value="" id="name" autocomplete="off" pattern="[a-zA-ZÀ-ÿ\s]{1,}$" required>
+        <span id="errorName" style="display: none"></span>
+        </div>
+
+<!-- ---------- Campo del email. ---------- -->
+
+        <div class="campos-formulario">
+        <label for="email">Email</label><br />
+        <input type="email" class="email" name="email" value="" id="email" autocomplete="off"
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+        required>
+        <span id="errorEmail" style="display: none"></span>
+        </div>
+
+<!-- ---------- Campo de la clave. ---------- -->
+
+        <div class="campos-formulario">
+        <label for="clave">Clave</label><br />
+        <input type="password" class="password" name="password" value="" id="password" autocomplete="off" maxlength="8" pattern="^.{1,8}$" required>
+        <span id="errorPassword" style="display: none"></span>
+        </div>
+
+<!-- ---------- Campo de la reconfirmación de la clave. ---------- -->
+
+        <div class="campos-formulario">
+        <label for="reclave">Confirme su clave</label><br />
+        <input type="password" class="confirma" name="confirma" value="" id="confirma" autocomplete="off" maxlength="8" pattern="^.{1,8}$" required>
+        <span id="errorConfirma" style="display: none"></span>
+        </div>
+
+<!-- ---------- Envío del formulario y fin de la caja. Fuerzo a validar todos los campos porque, si no, no salta el aviso de que faltan los campos por rellenar. ---------- -->
+
+        <button id="botonEnviar" class="button" type="submit" onclick="return validarName(), validarEmail(), validarPassword(), validarConfirma()">ENVIAR</button>
+        </form>
+        </div>
+
+<!-- ---------- Ejecución de Javascript--------- -->
+
+        <script src="index.js" type="text/javascript"></script> 
+</body>
+</html>
